@@ -8,9 +8,17 @@ using HtmlAgilityPack;
 
 namespace KairosScheduler
 {
-    // Clase para realizar las conexiones y obtener datos de SIIAU
+    /// <summary>
+    /// Clase para realizar las conexiones y obtener datos de SIIAU.
+    /// </summary>
     public static class Siiau
     {
+        /// <summary>
+        /// Funcion para obtener una unica clase de SIIAU
+        /// </summary>
+        /// <param name="url">URL con los propios GET implementados </param>
+        /// TODO: Pasar por parametro los parametros de GET
+        /// <returns></returns>
         public static Clase GetClase(string url)
         {
             Clase materia = new Clase();
@@ -33,7 +41,6 @@ namespace KairosScheduler
             {
                 try
                 {
-                    
                     clase = new ClaseData();
                     
                     clase.NRC = int.Parse(row.SelectSingleNode("td[@class='tddatos'][1]").InnerText);
@@ -87,6 +94,12 @@ namespace KairosScheduler
             return materia;
         }
         
+        /// <summary>
+        /// Funcion para obtener todas las materias de una Carrera
+        /// </summary>
+        /// <param name="url"> URL con todos los GET</param>
+        /// TODO: pasar solo la carrera
+        /// <returns>Array con todas las clases</returns>
         public static Clase[] GetClases(string url)
         {
             List<Clase> materias = new List<Clase>();
