@@ -67,6 +67,18 @@
     <Compile Include="Wizzard\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wizzard\WizardSelectType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizzard\WizardSelectType.Designer.cs">
+      <DependentUpon>WizardSelectType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizzard\WizzardContent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizzard\WizzardContent.Designer.cs">
+      <DependentUpon>WizzardContent.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +93,9 @@
     </Compile>
     <EmbeddedResource Include="Wizzard\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizzard\WizzardContent.resx">
+      <DependentUpon>WizzardContent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
