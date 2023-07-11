@@ -40,6 +40,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,6 +60,12 @@
     <Compile Include="Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManualScheduler\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManualScheduler\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Wizzard\Main.cs">
@@ -67,6 +74,7 @@
     <Compile Include="Wizzard\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Text.cs" />
     <Compile Include="Wizzard\WizardSelectType.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,6 +90,9 @@
     <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManualScheduler\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -93,6 +104,9 @@
     </Compile>
     <EmbeddedResource Include="Wizzard\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizzard\WizardSelectType.resx">
+      <DependentUpon>WizardSelectType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wizzard\WizzardContent.resx">
       <DependentUpon>WizzardContent.cs</DependentUpon>

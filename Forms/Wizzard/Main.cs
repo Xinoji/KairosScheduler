@@ -12,11 +12,19 @@ namespace Forms.Wizzard
 { 
     public partial class Main : Form
     {
+        
         public Main()
         {
+
             InitializeComponent();
+            SetTexts();
             MaximizeBox = false;
 
+        }
+
+        private void SetTexts()
+        {
+            lblVersion.Text = $"{Forms.Text.ProyectName} {Forms.Text.ProyectVersion}";
         }
     }
 }

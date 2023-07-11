@@ -10,13 +10,15 @@ using System.Windows.Forms;
 
 namespace Forms.Wizzard
 {
-    public partial class WizardSelectType : WizzardContent
+    public partial class WizzardSelectType : WizzardContent
     {
-        public override string Title { get => "Seleccione el Horairo"; }
+        public override string Title { get => " "; }
         public override string Description { get => "Seleccione la forma en la que se elaborara el horario"; }
-        public WizardSelectType() : base()
+        public WizzardSelectType() : base()
         {
             InitializeComponent();
         }
+        //Pasar los parametros 
+        public virtual string GetData() { return null; }
     }
 }

@@ -12,12 +12,14 @@ namespace Forms.Wizzard
 {
     public partial class WizzardContent : UserControl
     {
-        public virtual string Title { get; set; }
-        public virtual string Description { get; set; }
+        
+        public virtual string Title { get => Forms.Text.ProyectName; }
+        public virtual string Description { get => "NoTextSet"; }
         protected WizzardContent()
         {
             InitializeComponent();
         }
+        public virtual object GetData() { return null; }
 
     }
 }
