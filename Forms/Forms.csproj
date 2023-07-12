@@ -54,6 +54,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Main\config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\config.Designer.cs">
+      <DependentUpon>config.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="Wizzard\WizzardContent.Designer.cs">
       <DependentUpon>WizzardContent.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Main\config.resx">
+      <DependentUpon>config.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -16,6 +16,9 @@ namespace Forms.ManualScheduler
         {
             InitializeComponent();
             tabControl1.TabPages.Remove(tabTemplate);
+            MaximizeBox = false;
+
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,6 +42,26 @@ namespace Forms.ManualScheduler
         }
 
         private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabTemplate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView7_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Main_Load(object sender, EventArgs e)
         {
 
         }

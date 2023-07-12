@@ -36,6 +36,8 @@
             this.button2 = new FontAwesome.Sharp.IconButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -127,7 +129,7 @@
             // 
             // button3
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
             this.button3.IconColor = System.Drawing.Color.Black;
@@ -135,22 +137,60 @@
             this.button3.IconSize = 90;
             this.button3.Location = new System.Drawing.Point(327, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(262, 320);
+            this.button3.Size = new System.Drawing.Size(262, 140);
             this.button3.TabIndex = 1;
-            this.button3.Text = "Generar horario";
+            this.button3.Text = "Generar de forma asistida";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Form1
+            // iconButton1
+            // 
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 90;
+            this.iconButton1.Location = new System.Drawing.Point(327, 140);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(262, 140);
+            this.iconButton1.TabIndex = 2;
+            this.iconButton1.Text = "Generar horario manualmente";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar._500Px;
+            this.iconButton2.IconColor = System.Drawing.SystemColors.ButtonShadow;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 1;
+            this.iconButton2.Location = new System.Drawing.Point(327, 280);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(262, 40);
+            this.iconButton2.TabIndex = 3;
+            this.iconButton2.Text = "Horario guardado";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 320);
+            this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -172,6 +212,8 @@
         private FontAwesome.Sharp.IconButton button3;
         private FontAwesome.Sharp.IconButton button1;
         private FontAwesome.Sharp.IconButton button2;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }
 
