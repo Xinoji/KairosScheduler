@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
-using HtmlAgilityPack;
+﻿using HtmlAgilityPack;
 
 namespace KairosScheduler
 {
@@ -57,11 +51,11 @@ namespace KairosScheduler
                         {
                             horario = new Hora();
 
-                            string Horas = subHorario.SelectSingleNode("td[2]").InnerText;
+                            string horas = subHorario.SelectSingleNode("td[2]").InnerText;
 
-                            horario.InitialHour = byte.Parse(Horas.Substring(0, 2));
+                            horario.InitialHour = byte.Parse(horas.Substring(0, 2));
 
-                            horario.FinalHour = byte.Parse(Horas.Substring(5, 2));
+                            horario.FinalHour = byte.Parse(horas.Substring(5, 2));
                             string[] dias = subHorario.SelectSingleNode("td[3]").InnerText.Split(" ");
 
                             for (int index = 0; index < Hora.DIAS; index++)
@@ -110,12 +104,11 @@ namespace KairosScheduler
             Hora horario;
 
             // TODO: try-catch para error de conexion
-            var web = new HtmlWeb();
-            var doc = web.Load(url);
+            HtmlWeb web = new HtmlWeb();
 
-            var data = doc.DocumentNode;
+            HtmlNode? data = web.Load(url).DocumentNode;
 
-            foreach (HtmlNode row in doc.DocumentNode.SelectNodes("/html/table[1]/tr[position() > 2]"))
+            foreach (HtmlNode row in web.Load(url).DocumentNode.SelectNodes("/html/table[1]/tr[position() > 2]"))
             {
                 try
                 {
@@ -150,11 +143,11 @@ namespace KairosScheduler
                         {
                             horario = new Hora();
 
-                            string Horas = subHorario.SelectSingleNode("td[2]").InnerText;
+                            string horas = subHorario.SelectSingleNode("td[2]").InnerText;
 
-                            horario.InitialHour = byte.Parse(Horas.Substring(0, 2));
+                            horario.InitialHour = byte.Parse(horas.Substring(0, 2));
 
-                            horario.FinalHour = byte.Parse(Horas.Substring(5, 2));
+                            horario.FinalHour = byte.Parse(horas.Substring(5, 2));
                             string[] dias = subHorario.SelectSingleNode("td[3]").InnerText.Split(" ");
 
                             for (int index = 0; index < Hora.DIAS; index++)
