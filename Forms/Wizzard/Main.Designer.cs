@@ -33,9 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.navPanel = new System.Windows.Forms.Panel();
             this.lblVersion = new System.Windows.Forms.Label();
-            this.buttonAnterior = new FontAwesome.Sharp.IconButton();
-            this.buttonNext = new FontAwesome.Sharp.IconButton();
-            this.buttonGenerate = new FontAwesome.Sharp.IconButton();
+            this.buttonAnterior = new System.Windows.Forms.Button();
+            this.buttonNext = new System.Windows.Forms.Button();
+            this.buttonGenerate = new System.Windows.Forms.Button();
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.infoPanel.SuspendLayout();
             this.navPanel.SuspendLayout();
@@ -91,9 +91,6 @@
             // 
             // buttonAnterior
             // 
-            this.buttonAnterior.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.buttonAnterior.IconColor = System.Drawing.Color.Black;
-            this.buttonAnterior.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonAnterior.Location = new System.Drawing.Point(335, 17);
             this.buttonAnterior.Name = "buttonAnterior";
             this.buttonAnterior.Size = new System.Drawing.Size(75, 23);
@@ -103,9 +100,6 @@
             // 
             // buttonNext
             // 
-            this.buttonNext.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.buttonNext.IconColor = System.Drawing.Color.Black;
-            this.buttonNext.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonNext.Location = new System.Drawing.Point(416, 17);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(75, 23);
@@ -115,9 +109,6 @@
             // 
             // buttonGenerate
             // 
-            this.buttonGenerate.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.buttonGenerate.IconColor = System.Drawing.Color.Black;
-            this.buttonGenerate.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonGenerate.Location = new System.Drawing.Point(417, 17);
             this.buttonGenerate.Name = "buttonGenerate";
             this.buttonGenerate.Size = new System.Drawing.Size(75, 23);
@@ -157,9 +148,9 @@
         private System.Windows.Forms.Panel ContentPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private FontAwesome.Sharp.IconButton buttonAnterior;
-        private FontAwesome.Sharp.IconButton buttonNext;
-        private FontAwesome.Sharp.IconButton buttonGenerate;
+        private System.Windows.Forms.Button buttonAnterior;
+        private System.Windows.Forms.Button buttonNext;
+        private System.Windows.Forms.Button buttonGenerate;
         private System.Windows.Forms.Label lblVersion;
     }
 }

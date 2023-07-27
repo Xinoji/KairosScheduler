@@ -55,8 +55,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabTemplate = new System.Windows.Forms.TabPage();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
@@ -364,29 +364,21 @@
             this.dataGridView4.Size = new System.Drawing.Size(588, 384);
             this.dataGridView4.TabIndex = 0;
             // 
-            // iconButton2
-            // 
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Gear;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 20;
-            this.iconButton2.Location = new System.Drawing.Point(580, -1);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(25, 23);
-            this.iconButton2.TabIndex = 2;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            // button9
+            //
+            this.button9.Location = new System.Drawing.Point(580, -1);
+            this.button9.Name = "iconButton2";
+            this.button9.Size = new System.Drawing.Size(25, 23);
+            this.button9.TabIndex = 2;
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // iconButton1
             // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(552, -1);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(25, 23);
-            this.iconButton1.TabIndex = 3;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.button10.Location = new System.Drawing.Point(552, -1);
+            this.button10.Name = "iconButton1";
+            this.button10.Size = new System.Drawing.Size(25, 23);
+            this.button10.TabIndex = 3;
+            this.button10.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
@@ -551,8 +543,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 450);
-            this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Main";
@@ -594,7 +586,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -615,7 +607,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabTemplate;
         private System.Windows.Forms.DataGridView dataGridView9;

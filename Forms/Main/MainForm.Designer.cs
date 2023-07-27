@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new FontAwesome.Sharp.IconButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new FontAwesome.Sharp.IconButton();
+            this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.button3 = new System.Windows.Forms.Button();
+            this.iconButton1 = new System.Windows.Forms.Button();
+            this.iconButton2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -60,10 +60,6 @@
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.IconChar = FontAwesome.Sharp.IconChar.Gear;
-            this.button1.IconColor = System.Drawing.Color.Black;
-            this.button1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.button1.IconSize = 38;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(0, 281);
             this.button1.Name = "button1";
@@ -105,10 +101,6 @@
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.IconChar = FontAwesome.Sharp.IconChar.Add;
-            this.button2.IconColor = System.Drawing.Color.Black;
-            this.button2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.button2.IconSize = 20;
             this.button2.Location = new System.Drawing.Point(0, 114);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(327, 26);
@@ -131,10 +123,6 @@
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
-            this.button3.IconColor = System.Drawing.Color.Black;
-            this.button3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.button3.IconSize = 90;
             this.button3.Location = new System.Drawing.Point(327, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(262, 140);
@@ -149,10 +137,6 @@
             // 
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 90;
             this.iconButton1.Location = new System.Drawing.Point(327, 140);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(262, 140);
@@ -167,10 +151,6 @@
             // 
             this.iconButton2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar._500Px;
-            this.iconButton2.IconColor = System.Drawing.SystemColors.ButtonShadow;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 1;
             this.iconButton2.Location = new System.Drawing.Point(327, 280);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(262, 40);
@@ -209,11 +189,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private FontAwesome.Sharp.IconButton button3;
-        private FontAwesome.Sharp.IconButton button1;
-        private FontAwesome.Sharp.IconButton button2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button iconButton1;
+        private System.Windows.Forms.Button iconButton2;
     }
 }
 

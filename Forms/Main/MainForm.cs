@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FontAwesome.Sharp;
+
 
 namespace Forms
 {
@@ -16,7 +16,7 @@ namespace Forms
         public MainForm()
         {
             InitializeComponent();
-            IconButton btn = new IconButton();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
