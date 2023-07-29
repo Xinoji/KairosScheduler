@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using static System.Net.WebRequestMethods;
 
 namespace KairosScheduler
 {
@@ -7,6 +8,26 @@ namespace KairosScheduler
     /// </summary>
     public static class Siiau
     {
+        /// <summary>
+        /// Funcion para obtener los ciclos que hay en la oferta academica.
+        /// </summary>
+        /// <returns> Par de valores de los ciclos en ID - Descripcion </returns>
+        public static Dictionary<string,string>? GetCicloDictionary()
+        {
+            const string xpath = "//select[@id='cicloID']/option";
+            const string url = "http://consulta.siiau.udg.mx/wco/sspseca.forma_consulta";
+            var web = new HtmlWeb();
+            var doc = web.Load(url);
+            var data = doc.DocumentNode;
+            Dictionary<string, string> optionsDictionary = new Dictionary<string, string>();
+
+            foreach (var option in data.SelectNodes(xpath))
+            {
+                optionsDictionary.Add(option.Attributes[0].Value,option.InnerText);
+            }
+            return optionsDictionary;
+        }
+
         /// <summary>
         /// Funcion para obtener una unica clase de SIIAU
         /// </summary>
@@ -56,7 +77,7 @@ namespace KairosScheduler
                             horario.InitialHour = byte.Parse(horas.Substring(0, 2));
 
                             horario.FinalHour = byte.Parse(horas.Substring(5, 2));
-                            string[] dias = subHorario.SelectSingleNode("td[3]").InnerText.Split(" ");
+                            string[] dias = subHorario.SelectSingleNode("td[3]").InnerText.Split(' ');
 
                             for (int index = 0; index < Hora.DIAS; index++)
                             {
@@ -148,7 +169,7 @@ namespace KairosScheduler
                             horario.InitialHour = byte.Parse(horas.Substring(0, 2));
 
                             horario.FinalHour = byte.Parse(horas.Substring(5, 2));
-                            string[] dias = subHorario.SelectSingleNode("td[3]").InnerText.Split(" ");
+                            string[] dias = subHorario.SelectSingleNode("td[3]").InnerText.Split(' ');
 
                             for (int index = 0; index < Hora.DIAS; index++)
                             {
