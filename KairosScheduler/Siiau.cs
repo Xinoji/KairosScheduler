@@ -8,24 +8,43 @@ namespace KairosScheduler
     /// </summary>
     public static class Siiau
     {
+        
         /// <summary>
-        /// Funcion para obtener los ciclos que hay en la oferta academica.
+        /// Metodo para obtener los diccionarios de ciclo y CU
         /// </summary>
-        /// <returns> Par de valores de los ciclos en ID - Descripcion </returns>
-        public static Dictionary<string,string>? GetCicloDictionary()
+        /// <param name="name">determina principalmente si es CU o ciclo</param>
+        /// <returns></returns>
+        private static Dictionary<string,string> GetDictionary(string name)
         {
-            const string xpath = "//select[@id='cicloID']/option";
+            string xpath = $"//select[@name='{name}p']/option";
             const string url = "http://consulta.siiau.udg.mx/wco/sspseca.forma_consulta";
-            var web = new HtmlWeb();
-            var doc = web.Load(url);
-            var data = doc.DocumentNode;
+
             Dictionary<string, string> optionsDictionary = new Dictionary<string, string>();
 
-            foreach (var option in data.SelectNodes(xpath))
+            foreach (var option in new HtmlWeb().Load(url).DocumentNode.SelectNodes(xpath))
             {
                 optionsDictionary.Add(option.Attributes[0].Value,option.InnerText);
             }
             return optionsDictionary;
+
+        }
+
+        /// <summary>
+        /// Funcion para obtener un diccionario con todos los centros universitarios que aparecen en la oferta academica
+        /// </summary>
+        /// <returns>Diccionario con la key para el post y la descripcion a mostrar.</returns>
+        public static Dictionary<string, string>? GetCuDictionary()
+        {
+            return GetDictionary(name:"cu");
+        }
+
+        /// <summary>
+        /// Funcion para obtener los ciclos que hay en la oferta academica.
+        /// </summary>
+        /// <returns> Par de valores de los ciclos en ID - Descripcion </returns>
+        public static Dictionary<string, string>? GetCicloDictionary()
+        {
+            return GetDictionary(name:"ciclo");
         }
 
         /// <summary>
