@@ -73,8 +73,15 @@
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.testPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ClaveColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
@@ -91,6 +98,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -109,8 +118,8 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.flowLayoutPanel1);
-            this.tabPage3.Controls.Add(this.testPanel);
+            this.tabPage3.Controls.Add(this.dataGridView6);
+            this.tabPage3.Controls.Add(this.dataGridView5);
             this.tabPage3.Controls.Add(this.button13);
             this.tabPage3.Controls.Add(this.button12);
             this.tabPage3.Controls.Add(this.textBox4);
@@ -535,22 +544,83 @@
             this.button10.TabIndex = 3;
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // testPanel
+            // dataGridView5
             // 
-            this.testPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.testPanel.Location = new System.Drawing.Point(156, 54);
-            this.testPanel.Name = "testPanel";
-            this.testPanel.Size = new System.Drawing.Size(438, 176);
-            this.testPanel.TabIndex = 17;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.AllowUserToResizeColumns = false;
+            this.dataGridView5.AllowUserToResizeRows = false;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView5.ColumnHeadersVisible = false;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Clave,
+            this.NombreColumn,
+            this.Column1});
+            this.dataGridView5.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
+            this.dataGridView5.Location = new System.Drawing.Point(156, 54);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersVisible = false;
+            this.dataGridView5.Size = new System.Drawing.Size(438, 176);
+            this.dataGridView5.TabIndex = 16;
+            this.dataGridView5.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView5_UserAddedRow);
             // 
-            // flowLayoutPanel1
+            // dataGridView6
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 232);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(586, 184);
-            this.flowLayoutPanel1.TabIndex = 18;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.ColumnHeadersVisible = false;
+            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ClaveColumn,
+            this.Nombre,
+            this.Column2,
+            this.Delete});
+            this.dataGridView6.Location = new System.Drawing.Point(8, 236);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowHeadersVisible = false;
+            this.dataGridView6.Size = new System.Drawing.Size(586, 180);
+            this.dataGridView6.TabIndex = 17;
+            // 
+            // Clave
+            // 
+            this.Clave.HeaderText = "Column1";
+            this.Clave.Name = "Clave";
+            this.Clave.Width = 50;
+            // 
+            // NombreColumn
+            // 
+            this.NombreColumn.HeaderText = "Nombre";
+            this.NombreColumn.Name = "NombreColumn";
+            this.NombreColumn.Width = 300;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // ClaveColumn
+            // 
+            this.ClaveColumn.HeaderText = "";
+            this.ClaveColumn.Name = "ClaveColumn";
+            this.ClaveColumn.Width = 50;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.HeaderText = "";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 30;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "";
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 20;
             // 
             // Main
             // 
@@ -584,6 +654,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -635,7 +707,14 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.FlowLayoutPanel testPanel;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClaveColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewButtonColumn Column2;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

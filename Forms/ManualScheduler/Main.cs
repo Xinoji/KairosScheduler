@@ -33,14 +33,14 @@ namespace Forms.ManualScheduler
             {
                 var test = new ClaseBox(clase);
                
-                testPanel.Controls.Add(test);
+                //testPanel.Controls.Add(test);
             }
 
             for (int i = 0; i < 6; i++)
             {
                 var test = new ClaseBox(clase, false);
 
-                flowLayoutPanel1.Controls.Add(test);
+                //flowLayoutPanel1.Controls.Add(test);
 
             }
         }
@@ -93,6 +93,11 @@ namespace Forms.ManualScheduler
         private void cicloComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Console.WriteLine(data.ElementAt(cicloComboBox.SelectedIndex));
+        }
+
+        private void dataGridView5_UserAddedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            e.Row.Cells[2].Value = "Select";
         }
     }
 }
