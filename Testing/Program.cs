@@ -5,13 +5,26 @@ using System.Xml;
 using HtmlAgilityPack;
 using KairosScheduler;
 
+
 namespace Testing
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var url = "http://consulta.siiau.udg.mx/wco/sspseca.consulta_oferta?ciclop=202310&cup=D&majrp=INCO&crsep=&materiap=&horaip=&horafp=&edifp=&aulap=&ordenp=0&mostrarp=6000";
+            var CicloDictionary = Siiau.GetCicloDictionary();
+            var url = "http://consulta.siiau.udg.mx/wco/sspseca.consulta_oferta?" +
+                      "ciclop=202310&" + //Ciclo escolar
+                      "cup=D&" + //Centro Universitario
+                      "majrp=INCO&" +
+                      "crsep=&" +
+                      "materiap=&" + //Nombre de materia
+                      "horaip=&" +
+                      "horafp=&" +
+                      "edifp=&" +
+                      "aulap=&" + 
+                      "ordenp=0&" + // Tipo de orden
+                      "mostrarp=6000"; //Cantidad Maxima
             var data= Siiau.GetClases(url);
             
             foreach (Clase item in data)
