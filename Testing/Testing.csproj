@@ -15,10 +15,4 @@
     <ProjectReference Include="..\KairosScheduler\KairosScheduler.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="test.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>
