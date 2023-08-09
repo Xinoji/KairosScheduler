@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace KairosScheduler
 {
@@ -17,6 +20,11 @@ namespace KairosScheduler
             array.CopyTo(result, 0);
             result[array.Length] = item;
             return result;
+        }
+
+        public static string getText(this HtmlNode node)
+        {
+            return Regex.Replace(node.InnerText, @"(^\s+|\s+$)", "");
         }
     }
 }
