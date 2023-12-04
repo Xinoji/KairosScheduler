@@ -17,30 +17,26 @@ namespace Forms.ManualScheduler
 {
     public partial class Main : Form
     {
-        private Dictionary<string, string> data;
+        private Dictionary<string, string> cu;
+        private Dictionary<string, string> ciclo;
         public Main()
         {
             InitializeComponent();
-            data = Siiau.GetCuDictionary();
-            cicloComboBox.DataSource = data.Values.ToList();
+            ciclo = Siiau.GetCicloDictionary();
+            cu = Siiau.GetCuDictionary();
+            cicloComboBox.DataSource = ciclo.Values.ToList();
+            cuComboBox.DataSource = cu.Values.ToList();
             tabControl1.TabPages.Remove(tabTemplate);
             MaximizeBox = false;
-
+            
             var urlString = "http://consulta.siiau.udg.mx/wco/sspseca.consulta_oferta?ciclop=202310&cup=D&majrp=&crsep=I7032&materiap=&horaip=&horafp=&edifp=&aulap=&ordenp=0&mostrarp=100";
             var clase = Siiau.GetClase(urlString);
 
             for (int i = 0; i < 6; i++)
             {
-                var test = new ClaseBox(clase);
-               
-                //testPanel.Controls.Add(test);
-            }
-
-            for (int i = 0; i < 6; i++)
-            {
                 var test = new ClaseBox(clase, false);
 
-                //flowLayoutPanel1.Controls.Add(test);
+                
 
             }
         }
@@ -92,7 +88,7 @@ namespace Forms.ManualScheduler
 
         private void cicloComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Console.WriteLine(data.ElementAt(cicloComboBox.SelectedIndex));
+            Console.WriteLine(ciclo.ElementAt(cicloComboBox.SelectedIndex));
         }
 
         private void dataGridView5_UserAddedRow(object sender, DataGridViewRowEventArgs e)

@@ -30,11 +30,20 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.ClaveColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cuComboBox = new System.Windows.Forms.ComboBox();
             this.cicloComboBox = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -73,17 +82,10 @@
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ClaveColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -98,8 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -124,7 +124,7 @@
             this.tabPage3.Controls.Add(this.button12);
             this.tabPage3.Controls.Add(this.textBox4);
             this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.comboBox3);
+            this.tabPage3.Controls.Add(this.cuComboBox);
             this.tabPage3.Controls.Add(this.cicloComboBox);
             this.tabPage3.Controls.Add(this.textBox1);
             this.tabPage3.Controls.Add(this.label5);
@@ -141,6 +141,84 @@
             this.tabPage3.Text = "Seleccionar Materias";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.ColumnHeadersVisible = false;
+            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ClaveColumn,
+            this.Nombre,
+            this.Column2,
+            this.Delete});
+            this.dataGridView6.Location = new System.Drawing.Point(8, 236);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowHeadersVisible = false;
+            this.dataGridView6.Size = new System.Drawing.Size(586, 180);
+            this.dataGridView6.TabIndex = 17;
+            // 
+            // ClaveColumn
+            // 
+            this.ClaveColumn.HeaderText = "";
+            this.ClaveColumn.Name = "ClaveColumn";
+            this.ClaveColumn.Width = 50;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.HeaderText = "";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 30;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "";
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 20;
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.AllowUserToResizeColumns = false;
+            this.dataGridView5.AllowUserToResizeRows = false;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView5.ColumnHeadersVisible = false;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Clave,
+            this.NombreColumn,
+            this.Column1});
+            this.dataGridView5.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
+            this.dataGridView5.Location = new System.Drawing.Point(156, 54);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersVisible = false;
+            this.dataGridView5.Size = new System.Drawing.Size(438, 176);
+            this.dataGridView5.TabIndex = 16;
+            this.dataGridView5.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView5_UserAddedRow);
+            // 
+            // Clave
+            // 
+            this.Clave.HeaderText = "Column1";
+            this.Clave.Name = "Clave";
+            this.Clave.Width = 50;
+            // 
+            // NombreColumn
+            // 
+            this.NombreColumn.HeaderText = "Nombre";
+            this.NombreColumn.Name = "NombreColumn";
+            this.NombreColumn.Width = 300;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // button13
             // 
@@ -175,14 +253,14 @@
             this.textBox3.Size = new System.Drawing.Size(258, 20);
             this.textBox3.TabIndex = 12;
             // 
-            // comboBox3
+            // cuComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(296, 3);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(298, 21);
-            this.comboBox3.TabIndex = 11;
-            this.comboBox3.Text = "Centro Universitario";
+            this.cuComboBox.FormattingEnabled = true;
+            this.cuComboBox.Location = new System.Drawing.Point(296, 3);
+            this.cuComboBox.Name = "cuComboBox";
+            this.cuComboBox.Size = new System.Drawing.Size(298, 21);
+            this.cuComboBox.TabIndex = 11;
+            this.cuComboBox.Text = "Centro Universitario";
             // 
             // cicloComboBox
             // 
@@ -544,84 +622,6 @@
             this.button10.TabIndex = 3;
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // dataGridView5
-            // 
-            this.dataGridView5.AllowUserToDeleteRows = false;
-            this.dataGridView5.AllowUserToResizeColumns = false;
-            this.dataGridView5.AllowUserToResizeRows = false;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView5.ColumnHeadersVisible = false;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Clave,
-            this.NombreColumn,
-            this.Column1});
-            this.dataGridView5.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.dataGridView5.Location = new System.Drawing.Point(156, 54);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersVisible = false;
-            this.dataGridView5.Size = new System.Drawing.Size(438, 176);
-            this.dataGridView5.TabIndex = 16;
-            this.dataGridView5.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView5_UserAddedRow);
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.ColumnHeadersVisible = false;
-            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ClaveColumn,
-            this.Nombre,
-            this.Column2,
-            this.Delete});
-            this.dataGridView6.Location = new System.Drawing.Point(8, 236);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.RowHeadersVisible = false;
-            this.dataGridView6.Size = new System.Drawing.Size(586, 180);
-            this.dataGridView6.TabIndex = 17;
-            // 
-            // Clave
-            // 
-            this.Clave.HeaderText = "Column1";
-            this.Clave.Name = "Clave";
-            this.Clave.Width = 50;
-            // 
-            // NombreColumn
-            // 
-            this.NombreColumn.HeaderText = "Nombre";
-            this.NombreColumn.Name = "NombreColumn";
-            this.NombreColumn.Width = 300;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // ClaveColumn
-            // 
-            this.ClaveColumn.HeaderText = "";
-            this.ClaveColumn.Name = "ClaveColumn";
-            this.ClaveColumn.Width = 50;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.HeaderText = "";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 30;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "";
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 20;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,6 +637,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -654,8 +656,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -685,7 +685,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cuComboBox;
         private System.Windows.Forms.ComboBox cicloComboBox;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TabPage tabPage4;

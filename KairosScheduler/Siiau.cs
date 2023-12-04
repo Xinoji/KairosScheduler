@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using System.Windows.Media.Media3D;
 using static System.Net.WebRequestMethods;
 
 namespace KairosScheduler
@@ -8,14 +9,14 @@ namespace KairosScheduler
     /// </summary>
     public static class Siiau
     {
-        
         /// <summary>
         /// Metodo para obtener los diccionarios de ciclo y CU
-        /// </summary>
         /// <param name="name">determina principalmente si es CU o ciclo</param>
         /// <returns></returns>
+        /// </summary>
         private static Dictionary<string,string> GetDictionary(string name)
         {
+           
             string xpath = $"//select[@name='{name}p']/option";
             const string url = "http://consulta.siiau.udg.mx/wco/sspseca.forma_consulta";
 
@@ -48,13 +49,51 @@ namespace KairosScheduler
         }
 
         /// <summary>
+        /// Funcion para obtener las clases a partir de la consulta dada
+        /// </summary>
+        /// <param name="url">URL con los propios GET implementados </param>
+        /// TODO: Pasar por parametro los parametros de GET
+        /// <returns></returns>
+        public static Clase[] GetClase(string ciclo, string cu, string carrera = "", string materiaClave = "", string materiaNombre = "") 
+        {
+        
+            var url = "http://consulta.siiau.udg.mx/wco/sspseca.consulta_oferta?" +
+                      $"ciclop={ciclo}&" + //Ciclo escolar
+                      $"cup={cu}&" + //Centro Universitario
+                      $"majrp={carrera}&" + // Clave de la carrera
+                      $"crsep={materiaClave}&" + //clave de materia
+                      $"materiap={materiaNombre}&" + //Nombre de materia
+                      "horaip=&" + //inicio horario
+                      "horafp=&" + //fin horario
+                      "edifp=&" + //edificio
+                      "aulap=&" +  //aula
+                      "ordenp=0&" + // Tipo de orden
+                      "mostrarp=6000"; //Cantidad Maxima
+
+            return GetClases(url);
+        }
+
+        /// <summary>
         /// Funcion para obtener una unica clase de SIIAU
         /// </summary>
         /// <param name="url">URL con los propios GET implementados </param>
         /// TODO: Pasar por parametro los parametros de GET
         /// <returns></returns>
-        public static Clase GetClase(string url)
+        public static Clase GetClase(string ciclo, string cu, string materiaClave, string carrera = "")
         {
+            var url = "http://consulta.siiau.udg.mx/wco/sspseca.consulta_oferta?" +
+                      $"ciclop={ciclo}&" + //Ciclo escolar
+                      $"cup={cu}&" + //Centro Universitario
+                      $"majrp={carrera}&" + // Clave de la carrera
+                      $"crsep={materiaClave}&" + //clave de materia
+                      "materiap=" + //Nombre de materia
+                      "horaip=&" + //inicio horario
+                      "horafp=&" + //fin horario
+                      "edifp=&" + //edificio
+                      "aulap=&" +  //aula
+                      "ordenp=0&" + // Tipo de orden
+                      "mostrarp=6000"; //Cantidad Maxima
+
             Clase materia = new Clase();
             List<ClaseData> clases = new List<ClaseData>();
             ClaseData clase;
