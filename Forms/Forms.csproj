@@ -154,9 +154,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KairosScheduler\KairosScheduler.csproj">
+    <ProjectReference Include="..\KairosScheduler\ScrappingTest.csproj">
       <Project>{e5480452-8dd4-478d-9543-c15268fe753d}</Project>
-      <Name>KairosScheduler</Name>
+      <Name>ScrappingTest</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
