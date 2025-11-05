@@ -2,7 +2,7 @@
 using System.Windows.Media.Media3D;
 using static System.Net.WebRequestMethods;
 
-namespace KairosScheduler
+namespace KairosScheduler.Legacy
 {
     /// <summary>
     /// Clase para realizar las conexiones y obtener datos de SIIAU.
