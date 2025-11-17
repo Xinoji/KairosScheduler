@@ -4,6 +4,6 @@ Proyecto para facilitar la forma de agendar en SIIAU utilizando una computadora,
 Proximamente saldran realeases portables del programa pero en caso de que se quiera desarrollar este es necesario tener
 ### Prerequisitos
 - .NETFramework 4.7.2
-- .NET 6.0
+- .NET 8.0
 
 
