@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Siiau.common.constants
+namespace KairosScheduler.Siiau.Common.Constants;
+
+public class UrlConstants
 {
-    internal class UrlConstants
-    {
-        public const string BaseCouseUrl = @"http://consulta.siiau.udg.mx/wco/sspseca.forma_consulta";
-        public const string BaseScheduleUrl = @"http://consulta.siiau.udg.mx/wco/sspseca.consulta_oferta";
-    }
+    public const string BaseUrl = @"http://consulta.siiau.udg.mx/wco";
+
+    public const string CoursePath = "sspseca.forma_consulta";
+    public const string SchedulePath = "sspseca.consulta_oferta";
 }
+

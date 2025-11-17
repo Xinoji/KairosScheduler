@@ -13,20 +13,20 @@ namespace KairosScheduler.Siiau.Helpers;
 public class UrlBuilder
 {
     private string _BaseUrl;
-    private List<string> _Paths;
-    private List<KeyValuePair<string, string>> _Parameters;
+    private readonly List<string> _Paths;
+    private readonly List<KeyValuePair<string, string>> _Parameters;
 
     public UrlBuilder()
     {
         _BaseUrl = String.Empty;
-        _Paths = new List<string>();
+        _Paths = new();
         _Parameters = new();
     }
 
     public UrlBuilder(string BaseUrl)
     {
         _BaseUrl = BaseUrl;
-        _Paths = new List<string>();
+        _Paths = new();
         _Parameters = new();
     }
 
@@ -47,7 +47,7 @@ public class UrlBuilder
     /// <returns></returns>
     public UrlBuilder AddPath(string path, bool urlEncodeNeeded = false)
     {
-        if (_Paths.Count == 0)
+        if (path.Length == 0)
             throw new InvalidUrlException("Path Cannot be Empty");
 
         if (urlEncodeNeeded)
@@ -60,8 +60,7 @@ public class UrlBuilder
 
     public UrlBuilder SetBaseUrl(string baseUrl)
     {
-        //TODO: Define if it should throw an exception if the base url already exists
-        _BaseUrl = _BaseUrl ?? baseUrl;
+        _BaseUrl = baseUrl;
 
         return this;
     }
@@ -75,13 +74,16 @@ public class UrlBuilder
         
         url += _BaseUrl;
         
-        if(_Paths.Any(p => p.Contains("/") || string.IsNullOrEmpty(p)))
+        if(_Paths.Any(p => p.Contains('/') || string.IsNullOrEmpty(p)))
             throw new InvalidUrlException("An Empty Path or Path that include '/' was tried to be added");
 
         foreach (string path in _Paths)
             url += $@"/{path}";
 
         url += "?";
+
+        foreach (var parameter in _Parameters)
+            url += $@"{parameter.Key}={parameter.Value}&";
 
         return url;
     }

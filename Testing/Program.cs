@@ -3,8 +3,6 @@ using System.Diagnostics;
 using System.Text.Json;
 using System.Xml;
 using HtmlAgilityPack;
-using KairosScheduler;
-
 
 namespace Testing
 {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Siiau.Helpers
+namespace KairosScheduler.Siiau.Helpers
 {
     internal class HtmlUtils
     {
