@@ -42,7 +42,6 @@ public static class CourseInfoScrapper
         List<Task> tasks = new();
 
         tasks.Add(GetCuData(RootNode));
-        
         tasks.Add(GetCicleData(RootNode));
 
         await Task.WhenAll(tasks);
